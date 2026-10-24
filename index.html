@@ -1,0 +1,58 @@
+  
+    <!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>学習記録タイマー</title>
+    <link rel="stylesheet" href="style.css">
+     <script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>学習記録タイマー</h1>
+
+    <!-- タイマー・現在の状況エリア -->
+    <div class="card">
+        <div class="section-title">タイマー操作</div>
+        <div class="btn-group">
+            <button class="btn-start" id="startBtn">スタート</button>
+            <button class="btn-confirm" id="confirmBtn">確認</button>
+            <button class="btn-stop" id="stopBtn">ストップ</button>
+        </div>
+        
+        <div id="ticker" class="ticker-display"></div>
+
+        <div class="time-display">開始時間: <span id="startTimeDisp">-</span></div>
+        <div class="time-display">終了時間: <span id="stopTimeDisp">-</span></div>
+    </div>
+
+    <!-- メモ・記録エリア -->
+    <div class="card">
+        <div class="section-title">メモ欄</div>
+        <textarea id="memoInput" placeholder="何をやったか記述"></textarea>
+        <button class="btn-save" id="saveBtn">記録する</button>
+    </div>
+
+    <!-- 記録表示エリア -->
+    <div class="card">
+        <div class="section-title">記録の確認</div>
+        
+        <input type="date" id="datePicker">
+        
+        <div class="view-controls">
+            <button class="btn-action" id="totalRecordBtn">全体の記録</button>
+            <button class="btn-clear" id="clearViewBtn">表示を消す</button>
+        </div>
+
+        <div id="displayArea">
+            <div class="empty-message">日付を選択するか、「全体の記録」を押してください。</div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>
